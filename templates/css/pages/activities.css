@@ -1,0 +1,154 @@
+/* ========================================
+   Activities Page Specific Styles
+   ======================================== */
+
+/* Activity Introduction */
+.activity-intro {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.activity-intro-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.activity-intro-content h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+}
+
+.activity-intro-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 2;
+}
+
+/* Booking Information Section */
+.booking-info {
+    background: var(--bg-light);
+    padding: 100px 0;
+}
+
+.booking-info-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.booking-info-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.booking-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.booking-info-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--kyoto-red) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.booking-info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.booking-info-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Experience Notes Section */
+.experience-notes-section {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a0f0a 100%);
+    padding: 80px 0;
+}
+
+.contact-cta-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.contact-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-cta .btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--white);
+}
+
+.contact-cta .btn-secondary:hover {
+    background: var(--white);
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .booking-info-content {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .activity-intro-content p {
+        font-size: 1rem;
+    }
+
+    .contact-cta-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

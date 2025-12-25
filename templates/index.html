@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="「すごしやすさ」を追求した高級民泊施設。プライベートな空間で特別な時間をお過ごしください。">
+    <title>Lien de Premier - 高級民泊施設</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#home">Lien de Premier</a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">HOME</a></li>
+                        <li><a href="rooms.html" class="nav-link">客室</a></li>
+                        <li><a href="activities.html" class="nav-link">アクティビティ</a></li>
+                        <li><a href="access.html" class="nav-link">アクセス</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                        <li><a href="booking/index.html" class="nav-link btn-reserve">ご予約</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920');">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920');">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1920');">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1920');">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1624387308396-ff22ba8e1e54?w=1920');">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tagline">"京"でひとときを</p>
+            <h1 class="hero-title">Lien de Premier</h1>
+            <p class="hero-subtitle">京都中心部で最大8名様まで宿泊可能</p>
+            <p class="hero-description">大人数でも泊まれる唯一の宿泊施設<br>古都の風情と現代の快適さが調和する特別な空間</p>
+            <a href="booking/index.html" class="btn btn-primary">ご予約はこちら</a>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">施設について</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>京都の中心地、錦市場から徒歩5分の好立地に佇む一棟貸しの宿泊施設です。</p>
+                    <p>最大8名様までご利用いただける広々とした空間は、京都では数少ない大人数対応の宿。ご家族やご友人との団らん、グループ旅行に最適です。町家をリノベーションした和モダンな空間で、京都の伝統美と現代の快適さを同時にお楽しみいただけます。</p>
+                    <p>二条城や京都御所といった名所にも近く、京都観光の拠点として理想的。喧騒を離れた落ち着きある空間で、古都・京都ならではの特別な時間をお過ごしください。</p>
+                </div>
+                <div class="about-images" data-aos="fade-left">
+                    <div class="about-image-grid">
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600" alt="和室リビング">
+                        </div>
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=600" alt="和モダン空間">
+                        </div>
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600" alt="京都町家">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exterior Section -->
+    <section class="exterior" id="exterior">
+        <div class="exterior-image" style="background-image: url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1920');">
+            <div class="exterior-overlay"></div>
+            <div class="exterior-content" data-aos="fade-up">
+                <h2>伝統と現代が調和する空間</h2>
+                <p>京町家をリノベーションした和モダンな一棟貸し</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">施設のご案内</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">Lien de Premierの魅力をご紹介</p>
+            </div>
+            <div class="highlights-grid">
+                <!-- Rooms Highlight -->
+                <a href="rooms.html" class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=800" alt="客室">
+                        <div class="highlight-overlay"></div>
+                    </div>
+                    <div class="highlight-content">
+                        <div class="highlight-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h3>客室</h3>
+                        <p>シングル、ダブル、エキストラの3タイプ。最大8名様まで宿泊可能な広々とした空間。</p>
+                        <span class="highlight-link">詳しく見る <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Activities Highlight -->
+                <a href="activities.html" class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1583487881003-7a1f7ca8b960?w=800" alt="体験サービス">
+                        <div class="highlight-overlay"></div>
+                    </div>
+                    <div class="highlight-content">
+                        <div class="highlight-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>アクティビティ</h3>
+                        <p>舞妓さんとのお茶体験、京都観光ツアー、出張懐石料理など特別な体験をご用意。</p>
+                        <span class="highlight-link">詳しく見る <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Access Highlight -->
+                <a href="access.html" class="highlight-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800" alt="アクセス">
+                        <div class="highlight-overlay"></div>
+                    </div>
+                    <div class="highlight-content">
+                        <div class="highlight-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>アクセス</h3>
+                        <p>錦市場から徒歩5分、二条城から徒歩10分。京都観光の拠点に最適なロケーション。</p>
+                        <span class="highlight-link">詳しく見る <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">施設の特徴</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="feature-title">高速Wi-Fi完備</h3>
+                    <p class="feature-description">快適なリモートワークやストリーミングが可能な高速インターネット環境</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="feature-title">フルキッチン</h3>
+                    <p class="feature-description">調理器具・食器完備で自炊も可能。長期滞在にも対応</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h3 class="feature-title">駅近アクセス</h3>
+                    <p class="feature-description">最寄り駅から徒歩5分。観光やビジネスに便利な立地</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="feature-title">セキュリティ</h3>
+                    <p class="feature-description">24時間監視カメラ・オートロック完備で安心のセキュリティ</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3 class="feature-title">駐車場完備</h3>
+                    <p class="feature-description">お車でお越しの方も安心。無料駐車場をご用意</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="feature-title">最新家電</h3>
+                    <p class="feature-description">大型テレビ・洗濯機・冷蔵庫など最新家電を完備</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA Section -->
+    <section class="booking-cta">
+        <div class="container">
+            <div class="booking-cta-content" data-aos="zoom-in">
+                <h2 class="booking-cta-title">ご予約はこちらから</h2>
+                <p class="booking-cta-text">簡単3ステップで予約完了</p>
+                <a href="booking/index.html" class="btn btn-primary btn-large">今すぐ予約する</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">FAQ</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">よくあるご質問</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>チェックイン・チェックアウトの時間を教えてください</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>チェックイン：15:00〜、チェックアウト：〜11:00です。時間外をご希望の場合は事前にご相談ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>キャンセルポリシーについて教えてください</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>チェックイン日の7日前まで：全額返金<br>チェックイン日の3〜6日前：50%返金<br>チェックイン日の2日前以降：返金なし</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>駐車場はありますか？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、無料駐車場を2台分ご用意しております。満車の場合は近隣のコインパーキングをご利用ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Wi-Fiは利用できますか？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、全室で高速Wi-Fiを無料でご利用いただけます。パスワードはチェックイン時にお伝えいたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h3>ペットの同伴は可能ですか？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>申し訳ございませんが、ペットの同伴はご遠慮いただいております。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question">
+                        <h3>喫煙は可能ですか？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>全室禁煙となっております。喫煙は指定の喫煙スペースをご利用ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="faq-question">
+                        <h3>アメニティは何がありますか？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>タオル、バスタオル、シャンプー、コンディショナー、ボディソープ、ドライヤー、歯ブラシセットをご用意しております。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
+                    <div class="faq-question">
+                        <h3>長期滞在の割引はありますか？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>7日以上のご滞在で5%、30日以上のご滞在で10%の割引がございます。詳しくはお問い合わせください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">ご質問・お問い合わせはこちらから</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </form>
+                </div>
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>client@mezonabi.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>電話</h3>
+                            <p>075-468-1085</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>受付時間</h3>
+                            <p>9:00 - 18:00（年中無休）</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>SNS</h3>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">Lien de Premier</h3>
+                    <p>"京"でひとときを<br>京都中心部の一棟貸し宿泊施設</p>
+                </div>
+                <div class="footer-section">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="rooms.html">客室</a></li>
+                        <li><a href="activities.html">アクティビティ</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="booking/index.html">ご予約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SNS</h4>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lien de Premier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Persistent CTA Button -->
+    <div class="persistent-cta">
+        <a href="booking/index.html" class="btn-reserve-float">
+            <i class="fas fa-calendar-check"></i>
+            <span>ご予約</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

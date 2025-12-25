@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lien de Premierの客室紹介。シングル、ダブル、エキストラの3タイプで最大8名様まで宿泊可能。和モダンな空間で快適なご滞在を。">
+    <title>客室 | Lien de Premier - 高級民泊施設</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/pages/rooms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Lien de Premier</a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">HOME</a></li>
+                        <li><a href="rooms.html" class="nav-link active">客室</a></li>
+                        <li><a href="activities.html" class="nav-link">アクティビティ</a></li>
+                        <li><a href="access.html" class="nav-link">アクセス</a></li>
+                        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+                        <li><a href="booking/index.html" class="nav-link btn-reserve">ご予約</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=1920');">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content" data-aos="fade-up">
+            <h1>客室</h1>
+            <p>Guest Rooms</p>
+        </div>
+        <nav class="breadcrumb breadcrumb-animate">
+            <a href="index.html" class="breadcrumb-link">HOME</a>
+            <span class="breadcrumb-separator">&gt;</span>
+            <span class="breadcrumb-current">客室</span>
+        </nav>
+    </section>
+
+    <!-- Room Introduction -->
+    <section class="room-intro">
+        <div class="container">
+            <div class="room-intro-content" data-aos="fade-up">
+                <h2>上質な空間で、特別なひとときを</h2>
+                <p>シングル、ダブル、エキストラの3タイプの客室をご用意。<br>町家をリノベーションした和モダンな空間で、最大8名様までご宿泊いただけます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="room-gallery">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">フォトギャラリー</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="gallery-grid" data-aos="fade-up">
+                <div class="gallery-item gallery-zoom">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800" alt="和室リビング">
+                </div>
+                <div class="gallery-item gallery-zoom">
+                    <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=800" alt="和モダンベッドルーム">
+                </div>
+                <div class="gallery-item gallery-zoom">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800" alt="京都町家外観">
+                </div>
+                <div class="gallery-item gallery-zoom">
+                    <img src="https://images.unsplash.com/photo-1578116922645-3976907a7671?w=800" alt="和風ダイニング">
+                </div>
+                <div class="gallery-item gallery-zoom">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800" alt="日本庭園">
+                </div>
+                <div class="gallery-item gallery-zoom">
+                    <img src="https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800" alt="和風バスルーム">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Types -->
+    <section class="room-types">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">客室タイプ</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">3つの客室タイプで、最大8名様までご宿泊いただけます</p>
+            </div>
+
+            <div class="room-type-list">
+                <!-- Single Room -->
+                <div class="room-type-card" data-aos="fade-up">
+                    <div class="room-type-image">
+                        <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=800" alt="シングルルーム">
+                        <div class="room-type-badge">
+                            <span>Single</span>
+                        </div>
+                    </div>
+                    <div class="room-type-content">
+                        <h3>シングルルーム</h3>
+                        <p class="room-type-description">コンパクトながらも快適な一人用のお部屋。ビジネスや一人旅に最適です。</p>
+                        <div class="room-type-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>約15㎡</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bed"></i>
+                                <span>シングルベッド×1</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-user"></i>
+                                <span>定員1名</span>
+                            </div>
+                        </div>
+                        <div class="room-type-amenities">
+                            <h4>設備・アメニティ</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> エアコン</li>
+                                <li><i class="fas fa-check"></i> デスク・チェア</li>
+                                <li><i class="fas fa-check"></i> クローゼット</li>
+                                <li><i class="fas fa-check"></i> 高速Wi-Fi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Double Room -->
+                <div class="room-type-card" data-aos="fade-up">
+                    <div class="room-type-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800" alt="ダブルルーム">
+                        <div class="room-type-badge popular">
+                            <span>Double</span>
+                        </div>
+                    </div>
+                    <div class="room-type-content">
+                        <h3>ダブルルーム</h3>
+                        <p class="room-type-description">ゆったりとしたダブルベッドで、カップルやご夫婦に人気のお部屋です。</p>
+                        <div class="room-type-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>約25㎡</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bed"></i>
+                                <span>ダブルベッド×1</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>定員2名</span>
+                            </div>
+                        </div>
+                        <div class="room-type-amenities">
+                            <h4>設備・アメニティ</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> エアコン</li>
+                                <li><i class="fas fa-check"></i> デスク・チェア</li>
+                                <li><i class="fas fa-check"></i> クローゼット</li>
+                                <li><i class="fas fa-check"></i> 高速Wi-Fi</li>
+                                <li><i class="fas fa-check"></i> テレビ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra Room -->
+                <div class="room-type-card" data-aos="fade-up">
+                    <div class="room-type-image">
+                        <img src="https://images.unsplash.com/photo-1578116922645-3976907a7671?w=800" alt="エキストラルーム">
+                        <div class="room-type-badge">
+                            <span>Extra</span>
+                        </div>
+                    </div>
+                    <div class="room-type-content">
+                        <h3>エキストラルーム</h3>
+                        <p class="room-type-description">2つのシングルベッドを備えた、ご友人やご家族向けのお部屋です。</p>
+                        <div class="room-type-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>約20㎡</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bed"></i>
+                                <span>シングルベッド×2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>定員2名</span>
+                            </div>
+                        </div>
+                        <div class="room-type-amenities">
+                            <h4>設備・アメニティ</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> エアコン</li>
+                                <li><i class="fas fa-check"></i> デスク・チェア</li>
+                                <li><i class="fas fa-check"></i> クローゼット</li>
+                                <li><i class="fas fa-check"></i> 高速Wi-Fi</li>
+                                <li><i class="fas fa-check"></i> 収納スペース</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Facilities -->
+    <section class="common-facilities-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">共用設備</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">快適な滞在をサポートする充実の設備</p>
+            </div>
+            <div class="common-facilities" data-aos="fade-up">
+                <div class="common-facilities-grid">
+                    <div class="common-facility-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>フルキッチン</span>
+                        <p>調理器具・食器完備</p>
+                    </div>
+                    <div class="common-facility-item">
+                        <i class="fas fa-bath"></i>
+                        <span>バスルーム</span>
+                        <p>ゆったりバスタブ付き</p>
+                    </div>
+                    <div class="common-facility-item">
+                        <i class="fas fa-couch"></i>
+                        <span>リビング</span>
+                        <p>団らんスペース</p>
+                    </div>
+                    <div class="common-facility-item">
+                        <i class="fas fa-soap"></i>
+                        <span>洗濯機</span>
+                        <p>乾燥機能付き</p>
+                    </div>
+                    <div class="common-facility-item">
+                        <i class="fas fa-temperature-low"></i>
+                        <span>冷暖房完備</span>
+                        <p>全室個別空調</p>
+                    </div>
+                    <div class="common-facility-item">
+                        <i class="fas fa-door-open"></i>
+                        <span>玄関スペース</span>
+                        <p>スマートロック</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities List -->
+    <section class="amenities-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">アメニティ</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="amenities-grid" data-aos="fade-up">
+                <div class="amenity-category">
+                    <h4><i class="fas fa-bed"></i> 寝具</h4>
+                    <ul>
+                        <li>高品質マットレス</li>
+                        <li>羽毛布団</li>
+                        <li>低反発枕</li>
+                        <li>バスローブ</li>
+                    </ul>
+                </div>
+                <div class="amenity-category">
+                    <h4><i class="fas fa-shower"></i> バス・洗面</h4>
+                    <ul>
+                        <li>シャンプー・コンディショナー</li>
+                        <li>ボディソープ</li>
+                        <li>バスタオル・フェイスタオル</li>
+                        <li>ドライヤー</li>
+                        <li>歯ブラシセット</li>
+                    </ul>
+                </div>
+                <div class="amenity-category">
+                    <h4><i class="fas fa-coffee"></i> キッチン</h4>
+                    <ul>
+                        <li>冷蔵庫</li>
+                        <li>電子レンジ</li>
+                        <li>電気ケトル</li>
+                        <li>調理器具一式</li>
+                        <li>食器・カトラリー</li>
+                    </ul>
+                </div>
+                <div class="amenity-category">
+                    <h4><i class="fas fa-wifi"></i> 設備</h4>
+                    <ul>
+                        <li>高速Wi-Fi</li>
+                        <li>大型テレビ</li>
+                        <li>エアコン（全室）</li>
+                        <li>セーフティボックス</li>
+                        <li>アイロン</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="booking-cta">
+        <div class="container">
+            <div class="booking-cta-content" data-aos="zoom-in">
+                <h2 class="booking-cta-title">ご予約はこちらから</h2>
+                <p class="booking-cta-text">最大8名様まで宿泊可能。グループ旅行に最適です。</p>
+                <a href="booking/index.html" class="btn btn-primary btn-large">今すぐ予約する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">Lien de Premier</h3>
+                    <p>"京"でひとときを<br>京都中心部の一棟貸し宿泊施設</p>
+                </div>
+                <div class="footer-section">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="rooms.html">客室</a></li>
+                        <li><a href="activities.html">アクティビティ</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="booking/index.html">ご予約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SNS</h4>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lien de Premier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Persistent CTA Button -->
+    <div class="persistent-cta">
+        <a href="booking/index.html" class="btn-reserve-float">
+            <i class="fas fa-calendar-check"></i>
+            <span>ご予約</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

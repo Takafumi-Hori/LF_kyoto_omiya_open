@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lien de Premier - 予約処理中">
+    <title>処理中 | Lien de Premier</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="stylesheet" href="../css/pages/booking.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        .processing-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
+            padding: 40px 20px;
+        }
+
+        .processing-content {
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .processing-animation {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .processing-spinner {
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .processing-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .processing-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-family: var(--font-serif);
+        }
+
+        .processing-text {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .processing-status {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .status-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .status-icon.completed {
+            background: var(--success-color, #28a745);
+            color: white;
+        }
+
+        .status-icon.pending {
+            background: var(--border-color);
+            color: var(--text-light);
+        }
+
+        .status-icon.active {
+            background: var(--primary-color);
+            color: white;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .status-text {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .status-text.pending {
+            color: var(--text-light);
+        }
+
+        .processing-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            padding: 15px;
+            background: rgba(139, 21, 56, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .processing-note i {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="processing-page">
+        <div class="processing-content">
+            <div class="processing-animation">
+                <div class="processing-spinner"></div>
+                <div class="processing-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+
+            <h1 class="processing-title">決済処理中</h1>
+            <p class="processing-text">
+                お客様の決済を処理しております。<br>
+                このページを閉じずにお待ちください。
+            </p>
+
+            <div class="processing-status">
+                <div class="status-item">
+                    <div class="status-icon completed">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <span class="status-text">予約情報の確認</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon active">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <span class="status-text">決済処理中...</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon pending">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <span class="status-text pending">予約確定</span>
+                </div>
+            </div>
+
+            <div class="processing-note">
+                <i class="fas fa-info-circle"></i>
+                処理には通常30秒〜1分程度かかります。<br>
+                完了次第、自動的に確認ページへ移動します。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulated processing - In production, this would poll the API
+        // for the reservation status
+
+        let checkCount = 0;
+        const maxChecks = 10;
+
+        function checkStatus() {
+            checkCount++;
+
+            // Simulate checking reservation status
+            // In production: fetch(`/api/reservations/${reservationId}`)
+
+            if (checkCount >= 3) {
+                // Simulate success after a few checks
+                window.location.href = 'confirmation.html';
+            } else if (checkCount < maxChecks) {
+                setTimeout(checkStatus, 2000);
+            } else {
+                // Timeout - show error
+                document.querySelector('.processing-title').textContent = '処理がタイムアウトしました';
+                document.querySelector('.processing-text').innerHTML =
+                    '決済処理に時間がかかっております。<br>しばらくしてから予約状況をご確認ください。';
+                document.querySelector('.processing-spinner').style.animation = 'none';
+                document.querySelector('.processing-icon i').className = 'fas fa-exclamation-triangle';
+            }
+        }
+
+        // Start checking after 2 seconds
+        setTimeout(checkStatus, 2000);
+    </script>
+</body>
+</html>
