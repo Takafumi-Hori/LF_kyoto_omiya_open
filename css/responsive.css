@@ -1,0 +1,707 @@
+/* ========================================
+   Tablet Styles (max-width: 992px)
+   ======================================== */
+@media (max-width: 992px) {
+    /* Header */
+    .nav {
+        position: fixed;
+        top: 76px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background: var(--white);
+        transition: var(--transition);
+        overflow-y: auto;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Hero */
+    .hero-tagline {
+        font-size: 1.4rem;
+        letter-spacing: 6px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        padding: 8px 25px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .slider-controls {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    /* Section */
+    section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* About */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image-grid {
+        grid-template-rows: 180px 120px;
+    }
+
+    /* Facility Page */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .floor-plan-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .common-facilities-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .tourist-spots-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .tourist-spot-image {
+        flex: 0 0 200px;
+    }
+
+    .facility-access-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Experience Services */
+    .experience-card {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-image {
+        height: 300px;
+    }
+
+    .experience-content {
+        padding: 30px;
+    }
+
+    .experience-title {
+        font-size: 1.6rem;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Access */
+    .access-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .access-map iframe {
+        height: 350px;
+    }
+
+    /* Contact */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* ========================================
+   Mobile Styles (max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+    /* Container */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header */
+    .header-content {
+        padding: 15px 0;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 66px;
+    }
+
+    .hero-tagline {
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        padding: 0 20px;
+    }
+
+    .slider-controls {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    /* Section */
+    section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .btn-large {
+        padding: 15px 40px;
+        font-size: 1rem;
+    }
+
+    /* About */
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-image-grid {
+        grid-template-rows: 150px 100px;
+        gap: 10px;
+    }
+
+    /* Facility Page */
+    .facility-subsection {
+        margin-bottom: 60px;
+    }
+
+    .subsection-title {
+        font-size: 1.8rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .floor-plan-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .room-plan-image {
+        height: 180px;
+    }
+
+    .common-facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tourist-spots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tourist-spot-card {
+        flex-direction: column;
+    }
+
+    .tourist-spot-image {
+        flex: none;
+        height: 200px;
+    }
+
+    .tourist-spot-content {
+        padding: 20px;
+    }
+
+    .tourist-spot-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .facility-access-map iframe {
+        height: 300px;
+    }
+
+    /* Experience Services */
+    .experience-card {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-image {
+        height: 250px;
+    }
+
+    .experience-content {
+        padding: 25px;
+    }
+
+    .experience-title {
+        font-size: 1.4rem;
+    }
+
+    .experience-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .experience-description {
+        font-size: 0.95rem;
+    }
+
+    .experience-details {
+        padding: 15px;
+    }
+
+    .experience-notes {
+        padding: 25px;
+    }
+
+    .experience-notes h4 {
+        font-size: 1.2rem;
+    }
+
+    .experience-notes li {
+        font-size: 0.95rem;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .feature-item {
+        padding: 20px;
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    .feature-title {
+        font-size: 1.1rem;
+    }
+
+    .feature-description {
+        font-size: 0.9rem;
+    }
+
+    /* Booking CTA */
+    .booking-cta {
+        padding: 60px 0;
+    }
+
+    .booking-cta-title {
+        font-size: 2rem;
+    }
+
+    .booking-cta-text {
+        font-size: 1rem;
+    }
+
+    /* Access */
+    .access-map iframe {
+        height: 300px;
+    }
+
+    .access-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .access-item p {
+        font-size: 0.95rem;
+        padding-left: 30px;
+    }
+
+    /* FAQ */
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .faq-answer p {
+        padding: 0 20px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Contact */
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .contact-info-item {
+        gap: 15px;
+    }
+
+    .contact-info-item i {
+        font-size: 1.3rem;
+    }
+
+    .contact-info-item h3 {
+        font-size: 1rem;
+    }
+
+    .contact-info-item p {
+        font-size: 0.95rem;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 0 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+
+    .footer-section p,
+    .footer-section ul a {
+        font-size: 0.95rem;
+    }
+
+    /* Scroll to Top */
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   Small Mobile Styles (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    /* Hero */
+    .hero-tagline {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        padding: 6px 15px;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        padding: 0 15px;
+    }
+
+    .slider-controls {
+        bottom: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    /* Section */
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 12px 35px;
+        font-size: 0.95rem;
+    }
+
+    /* Facility Page */
+    .subsection-title {
+        font-size: 1.6rem;
+    }
+
+    .room-plan-image {
+        height: 160px;
+    }
+
+    .room-plan-details {
+        padding: 20px;
+    }
+
+    .common-facilities-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .common-facility-item i {
+        font-size: 1.5rem;
+    }
+
+    .common-facility-item span {
+        font-size: 0.8rem;
+    }
+
+    .tourist-spot-image {
+        height: 180px;
+    }
+
+    .tourist-spot-content {
+        padding: 15px;
+    }
+
+    .facility-access-map iframe {
+        height: 250px;
+    }
+
+    /* Experience Services */
+    .experience-image {
+        height: 200px;
+    }
+
+    .experience-content {
+        padding: 20px;
+    }
+
+    .experience-title {
+        font-size: 1.3rem;
+    }
+
+    .experience-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .experience-description {
+        font-size: 0.9rem;
+    }
+
+    .experience-details {
+        padding: 15px;
+    }
+
+    .experience-detail-item {
+        font-size: 0.9rem;
+    }
+
+    .experience-features {
+        gap: 8px;
+    }
+
+    .experience-tag {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .experience-notes {
+        padding: 20px;
+    }
+
+    .experience-notes h4 {
+        font-size: 1.1rem;
+    }
+
+    .experience-notes li {
+        font-size: 0.9rem;
+    }
+
+    /* Features */
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    /* Booking CTA */
+    .booking-cta-title {
+        font-size: 1.7rem;
+    }
+
+    .booking-cta-text {
+        font-size: 0.95rem;
+    }
+
+    /* Access */
+    .access-map iframe {
+        height: 250px;
+    }
+
+    /* Contact */
+    .contact-info-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-social a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    /* Scroll to Top */
+    .scroll-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   Landscape Mobile (max-height: 500px)
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}

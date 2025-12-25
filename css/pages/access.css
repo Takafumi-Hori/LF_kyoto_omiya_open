@@ -1,0 +1,446 @@
+/* ========================================
+   Access Page Specific Styles
+   ======================================== */
+
+/* Location Info Section */
+.location-info {
+    background: var(--white);
+    padding: 100px 0;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.location-text h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+}
+
+.location-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 2;
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location-detail-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.location-detail-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.location-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--kyoto-red) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.location-detail-content h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.location-detail-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.location-detail-content a {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.location-detail-content a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section */
+.map-section {
+    background: var(--bg-light);
+    padding: 80px 0;
+}
+
+.map-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.map-wrapper iframe {
+    display: block;
+}
+
+.map-actions {
+    text-align: center;
+}
+
+/* Transportation Section */
+.transportation-section {
+    background: var(--white);
+    padding: 100px 0;
+}
+
+.transportation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.transportation-card {
+    background: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.transportation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.transportation-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--kyoto-red) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.transportation-card h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+}
+
+.transportation-routes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.route-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.route-badge {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.route-badge.main {
+    background: var(--primary-color);
+}
+
+.route-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.route-content strong {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+}
+
+.route-time {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.route-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.parking-info,
+.airport-tip {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--white);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.parking-info i,
+.airport-tip i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.parking-info strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.parking-info p,
+.airport-tip p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Nearby Spots Section */
+.nearby-section {
+    background: var(--bg-light);
+    padding: 100px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 15px;
+}
+
+.nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.nearby-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.nearby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.nearby-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.nearby-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.nearby-card:hover .nearby-image img {
+    transform: scale(1.1);
+}
+
+.nearby-distance {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nearby-content {
+    padding: 20px;
+}
+
+.nearby-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.nearby-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Access Notes Section */
+.access-notes-section {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.access-notes {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.access-notes h4 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+}
+
+.access-notes ul {
+    list-style: none;
+}
+
+.access-notes li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.access-notes li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.access-notes li i {
+    color: var(--primary-color);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Contact CTA Section (Same as activities page) */
+.contact-cta {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a0f0a 100%);
+    padding: 80px 0;
+}
+
+.contact-cta-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.contact-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-cta .btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--white);
+}
+
+.contact-cta .btn-secondary:hover {
+    background: var(--white);
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .transportation-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .nearby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .location-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .location-text p {
+        font-size: 1rem;
+    }
+
+    .nearby-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .contact-cta-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .access-notes {
+        padding: 25px;
+    }
+}

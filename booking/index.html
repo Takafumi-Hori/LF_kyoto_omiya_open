@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lien de Premierのご予約ページ。日程を選択して、京都での特別な滞在をご予約ください。">
+    <title>ご予約 | Lien de Premier - 高級民泊施設</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="stylesheet" href="../css/pages/booking.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header-light" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">Lien de Premier</a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">HOME</a></li>
+                        <li><a href="../rooms.html" class="nav-link">客室</a></li>
+                        <li><a href="../activities.html" class="nav-link">アクティビティ</a></li>
+                        <li><a href="../access.html" class="nav-link">アクセス</a></li>
+                        <li><a href="../index.html#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="../index.html#contact" class="nav-link">CONTACT</a></li>
+                        <li><a href="index.html" class="nav-link btn-reserve active">ご予約</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Header -->
+    <section class="booking-header">
+        <div class="container">
+            <nav class="breadcrumb" data-aos="fade-up">
+                <a href="../index.html" class="breadcrumb-link">HOME</a>
+                <span class="breadcrumb-separator">&gt;</span>
+                <span class="breadcrumb-current">ご予約</span>
+            </nav>
+            <h1 class="booking-title" data-aos="fade-up">ご予約</h1>
+            <p class="booking-subtitle" data-aos="fade-up">Reservation</p>
+        </div>
+    </section>
+
+    <!-- Progress Steps -->
+    <section class="booking-progress">
+        <div class="container">
+            <div class="progress-steps" data-aos="fade-up">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">日程選択</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">ゲスト情報</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">決済</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="booking-content">
+        <div class="container">
+            <div class="booking-layout">
+                <!-- Main Form Area -->
+                <div class="booking-main">
+                    <!-- Step 1: Date Selection -->
+                    <div class="booking-step step-1 active" data-aos="fade-up">
+                        <h2 class="step-title">日程を選択してください</h2>
+
+                        <div class="date-selection">
+                            <div class="date-input-group">
+                                <label for="checkin-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    チェックイン
+                                </label>
+                                <input type="date" id="checkin-date" name="checkin-date" required>
+                                <span class="date-note">15:00〜21:00</span>
+                            </div>
+                            <div class="date-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="date-input-group">
+                                <label for="checkout-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    チェックアウト
+                                </label>
+                                <input type="date" id="checkout-date" name="checkout-date" required>
+                                <span class="date-note">〜10:00</span>
+                            </div>
+                        </div>
+
+                        <div class="guest-selection">
+                            <label for="guest-count">
+                                <i class="fas fa-users"></i>
+                                宿泊人数
+                            </label>
+                            <select id="guest-count" name="guest-count">
+                                <option value="1">1名</option>
+                                <option value="2" selected>2名</option>
+                                <option value="3">3名</option>
+                                <option value="4">4名</option>
+                                <option value="5">5名</option>
+                                <option value="6">6名</option>
+                                <option value="7">7名</option>
+                                <option value="8">8名</option>
+                            </select>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-primary btn-large next-step" data-next="2">
+                                次へ進む
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Guest Information -->
+                    <div class="booking-step step-2" data-aos="fade-up">
+                        <h2 class="step-title">ゲスト情報を入力してください</h2>
+
+                        <form id="guest-form" class="guest-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guest-lastname">
+                                        姓 <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="guest-lastname" name="lastname" required placeholder="山田">
+                                </div>
+                                <div class="form-group">
+                                    <label for="guest-firstname">
+                                        名 <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="guest-firstname" name="firstname" required placeholder="太郎">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guest-lastname-kana">
+                                        セイ <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="guest-lastname-kana" name="lastname-kana" required placeholder="ヤマダ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="guest-firstname-kana">
+                                        メイ <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="guest-firstname-kana" name="firstname-kana" required placeholder="タロウ">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-email">
+                                    メールアドレス <span class="required">*</span>
+                                </label>
+                                <input type="email" id="guest-email" name="email" required placeholder="example@email.com">
+                                <span class="form-note">予約確認メールをお送りします</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-phone">
+                                    電話番号 <span class="required">*</span>
+                                </label>
+                                <input type="tel" id="guest-phone" name="phone" required placeholder="090-1234-5678">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-requests">
+                                    特別なご要望（任意）
+                                </label>
+                                <textarea id="guest-requests" name="requests" rows="4" placeholder="アレルギーや特別なリクエストがありましたらご記入ください"></textarea>
+                            </div>
+                        </form>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-secondary prev-step" data-prev="1">
+                                <i class="fas fa-arrow-left"></i>
+                                戻る
+                            </button>
+                            <button type="button" class="btn btn-primary btn-large next-step" data-next="3">
+                                次へ進む
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Payment -->
+                    <div class="booking-step step-3" data-aos="fade-up">
+                        <h2 class="step-title">お支払い情報を入力してください</h2>
+
+                        <!-- Coupon Code -->
+                        <div class="coupon-section">
+                            <h3>クーポンコード</h3>
+                            <div class="coupon-input-wrapper">
+                                <input type="text" id="coupon-code" name="coupon-code" placeholder="クーポンコードを入力">
+                                <button type="button" class="btn btn-secondary apply-coupon">適用</button>
+                            </div>
+                            <div class="coupon-message" id="coupon-message"></div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="payment-section">
+                            <h3>お支払い方法</h3>
+                            <div class="payment-methods">
+                                <label class="payment-method selected">
+                                    <input type="radio" name="payment-method" value="card" checked>
+                                    <div class="payment-method-content">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>クレジットカード</span>
+                                        <div class="card-brands">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                            <i class="fab fa-cc-jcb"></i>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Stripe Elements Placeholder -->
+                            <div class="card-element-wrapper">
+                                <div id="card-element">
+                                    <!-- Stripe Elements will be inserted here -->
+                                    <div class="card-element-placeholder">
+                                        <div class="form-group">
+                                            <label>カード番号</label>
+                                            <input type="text" placeholder="1234 5678 9012 3456" disabled>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label>有効期限</label>
+                                                <input type="text" placeholder="MM/YY" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>CVC</label>
+                                                <input type="text" placeholder="123" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="card-errors" class="card-errors"></div>
+                            </div>
+                        </div>
+
+                        <!-- Terms Agreement -->
+                        <div class="terms-section">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" id="terms-agree" name="terms-agree" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">
+                                    <a href="#" target="_blank">利用規約</a>および<a href="#" target="_blank">プライバシーポリシー</a>に同意します
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-secondary prev-step" data-prev="2">
+                                <i class="fas fa-arrow-left"></i>
+                                戻る
+                            </button>
+                            <button type="button" class="btn btn-primary btn-large submit-booking" id="submit-booking">
+                                <i class="fas fa-lock"></i>
+                                予約を確定する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar: Booking Summary -->
+                <aside class="booking-sidebar" data-aos="fade-left">
+                    <div class="booking-summary">
+                        <h3 class="summary-title">ご予約内容</h3>
+
+                        <div class="summary-property">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400" alt="Lien de Premier">
+                            </div>
+                            <div class="property-info">
+                                <h4>Lien de Premier</h4>
+                                <p>京都府京都市中京区堀川通錦小路下る</p>
+                            </div>
+                        </div>
+
+                        <div class="summary-dates">
+                            <div class="summary-row">
+                                <span class="summary-label">チェックイン</span>
+                                <span class="summary-value" id="summary-checkin">—</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">チェックアウト</span>
+                                <span class="summary-value" id="summary-checkout">—</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">宿泊数</span>
+                                <span class="summary-value" id="summary-nights">—泊</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">宿泊人数</span>
+                                <span class="summary-value" id="summary-guests">2名</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-pricing">
+                            <div class="summary-row">
+                                <span class="summary-label">宿泊料金</span>
+                                <span class="summary-value" id="summary-base-price">¥0</span>
+                            </div>
+                            <div class="summary-row discount" id="discount-row" style="display: none;">
+                                <span class="summary-label">クーポン割引</span>
+                                <span class="summary-value discount-value" id="summary-discount">-¥0</span>
+                            </div>
+                            <div class="summary-row taxes">
+                                <span class="summary-label">税・サービス料</span>
+                                <span class="summary-value" id="summary-taxes">¥0</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span class="summary-label">合計（税込）</span>
+                                <span class="summary-value" id="summary-total">¥0</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-notes">
+                            <p><i class="fas fa-info-circle"></i> キャンセルポリシーは<a href="#">こちら</a></p>
+                            <p><i class="fas fa-shield-alt"></i> 安全な決済システムを使用</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-simple">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lien de Premier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

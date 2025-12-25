@@ -1,0 +1,436 @@
+/* ========================================
+   Page Transitions & Animations
+   ======================================== */
+
+/* Page Transition Overlay */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-light);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+/* Page Load Animation */
+.page-enter {
+    animation: pageEnter 0.6s ease forwards;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Reveal Animation */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Children Animation */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stagger-children.revealed > *:nth-child(1) { animation: staggerIn 0.6s ease forwards 0.1s; }
+.stagger-children.revealed > *:nth-child(2) { animation: staggerIn 0.6s ease forwards 0.2s; }
+.stagger-children.revealed > *:nth-child(3) { animation: staggerIn 0.6s ease forwards 0.3s; }
+.stagger-children.revealed > *:nth-child(4) { animation: staggerIn 0.6s ease forwards 0.4s; }
+.stagger-children.revealed > *:nth-child(5) { animation: staggerIn 0.6s ease forwards 0.5s; }
+.stagger-children.revealed > *:nth-child(6) { animation: staggerIn 0.6s ease forwards 0.6s; }
+
+@keyframes staggerIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide Animations */
+.slide-left {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.8s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+.slide-down {
+    animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade Animations */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Scale Animations */
+.scale-in {
+    animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Image Reveal Animation */
+.image-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.image-reveal.revealed::after {
+    transform: scaleX(0);
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.text-reveal.revealed span {
+    transform: translateY(0);
+}
+
+/* Parallax Effect */
+.parallax-element {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+/* Smooth Hover Transitions */
+.smooth-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.smooth-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Press Effect */
+.btn-press {
+    transition: transform 0.1s ease;
+}
+
+.btn-press:active {
+    transform: scale(0.98);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--bg-light);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Pulse Animation */
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Float Animation */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Breadcrumb Animation */
+.breadcrumb-animate {
+    opacity: 0;
+    animation: breadcrumbIn 0.5s ease forwards 0.3s;
+}
+
+@keyframes breadcrumbIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Link Underline Animation */
+.nav-link-animated {
+    position: relative;
+}
+
+.nav-link-animated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link-animated:hover::after,
+.nav-link-animated.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Card Flip Animation */
+.card-flip {
+    perspective: 1000px;
+}
+
+.card-flip-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Progress Step Animation */
+.step-progress {
+    transition: all 0.5s ease;
+}
+
+.step-progress.active {
+    animation: stepPulse 0.5s ease;
+}
+
+@keyframes stepPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Mobile Menu Slide */
+.mobile-menu-slide {
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mobile-menu-slide.active {
+    transform: translateX(0);
+}
+
+/* Backdrop Blur Animation */
+.backdrop-animate {
+    opacity: 0;
+    backdrop-filter: blur(0);
+    transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.backdrop-animate.active {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+}
+
+/* Gallery Image Zoom */
+.gallery-zoom {
+    overflow: hidden;
+}
+
+.gallery-zoom img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Accordion Animation */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+}
+
+/* Price Counter Animation */
+.price-counter {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.price-counter.updating {
+    animation: priceUpdate 0.3s ease;
+}
+
+@keyframes priceUpdate {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* Success Checkmark Animation */
+.success-checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: var(--primary-color);
+    stroke-miterlimit: 10;
+    animation: fillSuccess 0.4s ease-in-out 0.4s forwards,
+               scaleSuccess 0.3s ease-in-out 0.9s both;
+}
+
+.success-checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--primary-color);
+    fill: none;
+    animation: strokeSuccess 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: strokeSuccess 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes strokeSuccess {
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes scaleSuccess {
+    0%, 100% { transform: none; }
+    50% { transform: scale3d(1.1, 1.1, 1); }
+}
+
+@keyframes fillSuccess {
+    100% { box-shadow: inset 0 0 0 30px rgba(139, 21, 56, 0.1); }
+}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lien de Premier - 予約完了">
+    <title>予約完了 | Lien de Premier</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="stylesheet" href="../css/pages/booking.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        .confirmation-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
+            padding: 60px 20px;
+        }
+
+        .confirmation-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .confirmation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .success-animation {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .success-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--success-color, #28a745) 0%, #20c997 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease;
+        }
+
+        .success-circle i {
+            font-size: 3rem;
+            color: white;
+            animation: checkmark 0.5s ease 0.3s backwards;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        @keyframes checkmark {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .confirmation-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-family: var(--font-serif);
+        }
+
+        .confirmation-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .reservation-card {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .reservation-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a0f0a 100%);
+            color: white;
+            padding: 25px 30px;
+        }
+
+        .reservation-number {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+
+        .reservation-id {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .reservation-details {
+            padding: 30px;
+        }
+
+        .detail-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .detail-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .detail-title {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .detail-label {
+            color: var(--text-light);
+        }
+
+        .detail-value {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .detail-value.total {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+
+        .property-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .property-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .property-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .property-details p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .email-notice {
+            background: rgba(139, 21, 56, 0.05);
+            border-radius: 12px;
+            padding: 20px 25px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .email-notice i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .email-notice-content h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .email-notice-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .action-buttons .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+        }
+
+        .important-info {
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .important-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .important-info h4 i {
+            color: var(--primary-color);
+        }
+
+        .important-info ul {
+            list-style: none;
+        }
+
+        .important-info li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            gap: 10px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .important-info li:last-child {
+            border-bottom: none;
+        }
+
+        .important-info li i {
+            color: var(--primary-color);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .confirmation-title {
+                font-size: 1.6rem;
+            }
+
+            .property-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-page">
+        <div class="confirmation-container">
+            <!-- Header -->
+            <div class="confirmation-header">
+                <div class="success-animation">
+                    <div class="success-circle">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                <h1 class="confirmation-title">ご予約が完了しました</h1>
+                <p class="confirmation-subtitle">ありがとうございます。京都でのご滞在をお待ちしております。</p>
+            </div>
+
+            <!-- Reservation Card -->
+            <div class="reservation-card">
+                <div class="reservation-header">
+                    <p class="reservation-number">予約番号</p>
+                    <p class="reservation-id">LDP-2024-001234</p>
+                </div>
+                <div class="reservation-details">
+                    <!-- Property -->
+                    <div class="detail-section">
+                        <p class="detail-title">ご宿泊施設</p>
+                        <div class="property-info">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200" alt="Lien de Premier">
+                            </div>
+                            <div class="property-details">
+                                <h4>Lien de Premier</h4>
+                                <p>京都府京都市中京区堀川通錦小路下る錦堀川町649<br>観タワーハウス</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dates -->
+                    <div class="detail-section">
+                        <p class="detail-title">ご宿泊日程</p>
+                        <div class="detail-row">
+                            <span class="detail-label">チェックイン</span>
+                            <span class="detail-value">2024年12月20日(金) 15:00〜</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">チェックアウト</span>
+                            <span class="detail-value">2024年12月22日(日) 〜10:00</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">宿泊数</span>
+                            <span class="detail-value">2泊</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">宿泊人数</span>
+                            <span class="detail-value">4名</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="detail-section">
+                        <p class="detail-title">お支払い金額</p>
+                        <div class="detail-row">
+                            <span class="detail-label">宿泊料金（2泊）</span>
+                            <span class="detail-value">¥70,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">税・サービス料</span>
+                            <span class="detail-value">¥7,000</span>
+                        </div>
+                        <div class="detail-row" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+                            <span class="detail-label" style="font-weight: 600;">合計（税込）</span>
+                            <span class="detail-value total">¥77,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Notice -->
+            <div class="email-notice">
+                <i class="fas fa-envelope"></i>
+                <div class="email-notice-content">
+                    <h4>確認メールをお送りしました</h4>
+                    <p>ご登録いただいたメールアドレスに予約確認メールをお送りしました。チェックイン時に必要となりますので、大切に保管してください。</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="../index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    トップページへ戻る
+                </a>
+                <button class="btn btn-secondary" onclick="window.print()">
+                    <i class="fas fa-print"></i>
+                    印刷する
+                </button>
+            </div>
+
+            <!-- Important Info -->
+            <div class="important-info">
+                <h4><i class="fas fa-info-circle"></i> ご宿泊に関するご案内</h4>
+                <ul>
+                    <li>
+                        <i class="fas fa-key"></i>
+                        チェックイン当日、施設の入り方や鍵の受け取り方法について詳細をメールでお送りいたします。
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        チェックインは15:00〜21:00となっております。21:00以降をご希望の場合は事前にご連絡ください。
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-times"></i>
+                        キャンセルの場合は、キャンセルポリシーに基づきキャンセル料が発生する場合がございます。
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        ご不明な点がございましたら、075-468-1085 までお気軽にお問い合わせください。
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
